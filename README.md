@@ -216,10 +216,26 @@ git push
 ```bash
 git pull origin main
 ```
-
 Downloads remote changes and integrates them into the current branch.
 
+```bash
+git pull origin main --rebase
+```
+Download the new changes and commits that your colleagues (or you, from another machine) have pushed to the `main` branch on GitHub.
+
+
 ### Fetch
+
+To have branches on your machine without mixing or merging them, you need to synchronize the server data and create a local copy of the other branch.
+```bash
+git fetch --all
+```
+Download all branches from the server gitHub 
+
+```bash
+git fetch name_rama
+```
+Downloads the other branch locally to review it.
 
 ```bash
 git fetch upstream
@@ -259,6 +275,12 @@ git mv <old> <new>
 ```
 
 Moves or renames a file while Git tracks the change.
+
+```bash
+git reset --hard origin/main
+git clean -fd
+```
+Discard your local changes and overwrite everything with the version from GitHub.
 
 ---
 
